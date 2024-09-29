@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using Попытка3;
 
-namespace LoginWindow
+namespace Попытка3
 {
     public partial class MainWindow : Window
     {
@@ -31,7 +31,7 @@ namespace LoginWindow
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Поле логина или пароля пусто. Пожалуйста, введите логин или пароль.");
+                MessageBox.Show("Поле логина или пароля пусто. Пожалуйста, введите логин или пароль.", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace LoginWindow
                 }
             }
 
-            MessageBox.Show("Неверный логин или пароль.");
+            MessageBox.Show("Неверный логин или пароль.", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
